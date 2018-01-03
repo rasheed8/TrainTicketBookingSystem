@@ -15,7 +15,7 @@ public class Student extends Passenger {
     // Setters
     public void setPrice(double ticketPrice) { 
     	this.price = ticketPrice; 
-    	this.price = this.price * 2.20;
+    	this.price = this.price * 2.25;
     }
 
     // toString

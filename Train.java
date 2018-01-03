@@ -1,28 +1,27 @@
 public class Train extends Ticket {
-    private int capacity = 4;
-    private int totalCapacity;
+    private int current_capacity;
+    private int totalCapacity = 6;
 
     // Constructor
     public Train(int capacity) {
-        this.capacity = capacity;
+        current_capacity = capacity;
     }
 
     // Getters
     public int getCapacity() { 
-    	return(this.capacity); 
+    	return(current_capacity++); 
     }
 
     // Setters
     public void setCapacity(int capacity) { 
-    	this.capacity = capacity; 
+    	capacity = current_capacity; 
     }
 
-    public String addPassenger(){
-        totalCapacity++;
-        if(totalCapacity >= capacity){
-            return "Total Capacity Reached. No more are permitted to board the train.";
+    public String addPassenger(int capacity){
+        if(totalCapacity <= capacity){
+            return "\nTotal Capacity Reached. No more are permitted to board the train.";
         }
-        return"";
+        return "";
     }
 
 }

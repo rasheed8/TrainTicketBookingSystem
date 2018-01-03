@@ -16,7 +16,7 @@ public class Adult extends Passenger {
     public void setPrice(double ticketPrice) { 
     	ticketPrice = 1.00;
     	this.price = ticketPrice; 
-    	this.price = this.price * 4.15000000000000000;
+    	this.price = this.price * 4.25;
     }
 
     // toString
