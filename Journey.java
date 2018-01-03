@@ -19,14 +19,16 @@ public class Journey extends Ticket{
     }
 
 	public int getStops(){
+                int firstStation = 0;
+                int lastStation = 0;
 		for(int i = 0; i < trainStations.length; i++){
 			if(trainStations[i].equals(this.start)){
-				int firstStation = i + 1;
+				firstStation = i + 1;
 			}
 		}
 		for(int j = 0; j < trainStations.length; j++){
 			if(trainStations[j].equals(this.end)){
-				 int lastStation = j + 1;
+				 lastStation = j + 1;
 			}
 		}
 		int between = lastStation - firstStation;
